@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[达文西的技术博客]]></title>
-  <link href="http://callmewenxi.github.io/callmewenxi/atom.xml" rel="self"/>
-  <link href="http://callmewenxi.github.io/callmewenxi/"/>
-  <updated>2017-07-04T00:53:09+08:00</updated>
-  <id>http://callmewenxi.github.io/callmewenxi/</id>
+  <link href="http://callmewenxi.github.io/atom.xml" rel="self"/>
+  <link href="http://callmewenxi.github.io/"/>
+  <updated>2017-07-04T01:08:17+08:00</updated>
+  <id>http://callmewenxi.github.io/</id>
   <author>
     <name><![CDATA[Dawenxi]]></name>
     
@@ -14,16 +14,14 @@
 
   
   <entry>
-    <title type="html"><![CDATA[开篇]]></title>
-    <link href="http://callmewenxi.github.io/callmewenxi/blog/2017/07/04/kai-pian/"/>
+    <title type="html"><![CDATA[富文本中图片居中问题]]></title>
+    <link href="http://callmewenxi.github.io/blog/2017/07/04/kai-pian/"/>
     <updated>2017-07-04T00:48:36+08:00</updated>
-    <id>http://callmewenxi.github.io/callmewenxi/blog/2017/07/04/kai-pian</id>
-    <content type="html"><![CDATA[<h1>富文本中图片居中问题</h1>
-
-<p>最近在做一个直播间活动通知的需求,服务器下发一串类Html协议的文本,然后解析组装成一个富文本展示.</p>
+    <id>http://callmewenxi.github.io/blog/2017/07/04/kai-pian</id>
+    <content type="html"><![CDATA[<p>最近在做一个直播间活动通知的需求,服务器下发一串类Html协议的文本,然后解析组装成一个富文本展示.</p>
 
 <p>在拼接完图片后发现文字和图片没有对齐,效果大概是这样:
-<img src="media/14981186608219/14981212053798.jpg" alt="" /></p>
+<img src="https://lh3.googleusercontent.com/-JSU2fYUuXV4/WVp5SeOBncI/AAAAAAAAAFY/Fur862HCAz8DBmfbBLzSoou-grN5gvhIwCHMYCw/I/14981212053798.jpg" alt="14981212053798" /></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -80,7 +78,7 @@
 <p>其实富文本中,图片居中只要知道文字的高度就可以计算了,Google后发现,其实UIFont的==lineHeight==属性就是文本的高度,使用文本高度减去图片高度除以2,就是图片的Y值.</p>
 
 <p>所以在设置NSTextAttachment时,计算正确的Y值,就可以使图片居中:
-<img src="media/14981186608219/14981219197864.jpg" alt="" /></p>
+<img src="https://lh3.googleusercontent.com/-t7CS3Ot4sjo/WVp5U1OZ_8I/AAAAAAAAAFc/yb4I6bnLr8MZdmdWKbQlH7qpNJDyntisACHMYCw/I/14981219197864.jpg" alt="14981219197864" /></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -94,7 +92,9 @@
 </span><span class='line'>imageAttachment.image = [UIImage imageNamed:@"image"];</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>关于UIFont的一些属性<img src="media/14981186608219/3761068638907909418.gif" alt="3761068638907909418" /></h3>
+<h3>关于UIFont的一些属性</h3>
+
+<p><img src="https://lh3.googleusercontent.com/-UF-ahvLNfGU/WVp5XYBsm7I/AAAAAAAAAFg/BkrhnO75fQg1uOFw1hYXTIrYDlfmNBJegCHMYCw/I/3761068638907909418.gif" alt="3761068638907909418" /></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>

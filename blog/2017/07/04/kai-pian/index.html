@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>开篇 - 达文西的技术博客</title>
+  <title>富文本中图片居中问题 - 达文西的技术博客</title>
   <meta name="author" content="Dawenxi">
 
   
-  <meta name="description" content="富文本中图片居中问题 最近在做一个直播间活动通知的需求,服务器下发一串类Html协议的文本,然后解析组装成一个富文本展示. 在拼接完图片后发现文字和图片没有对齐,效果大概是这样: 1
+  <meta name="description" content="最近在做一个直播间活动通知的需求,服务器下发一串类Html协议的文本,然后解析组装成一个富文本展示. 在拼接完图片后发现文字和图片没有对齐,效果大概是这样: 1
 2
 3
 4
@@ -31,7 +31,8 @@
 20
 21
 22
-23 &hellip;">
+23
+24 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -40,7 +41,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://callmewenxi.github.io/callmewenxi/blog/2017/07/04/kai-pian/">
+  <link rel="canonical" href="http://callmewenxi.github.io/blog/2017/07/04/kai-pian/">
   <link href="/callmewenxi/favicon.png" rel="icon">
   <link href="/callmewenxi/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/callmewenxi/atom.xml" rel="alternate" title="达文西的技术博客" type="application/atom+xml">
@@ -72,7 +73,7 @@
   
 <form action="https://www.google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="sitesearch" value="callmewenxi.github.io/callmewenxi">
+    <input type="hidden" name="sitesearch" value="callmewenxi.github.io">
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -90,7 +91,7 @@
   
   <header>
     
-      <h1 class="entry-title">开篇</h1>
+      <h1 class="entry-title">富文本中图片居中问题</h1>
     
     
       <p class="meta">
@@ -106,12 +107,10 @@
   </header>
 
 
-<div class="entry-content"><h1>富文本中图片居中问题</h1>
-
-<p>最近在做一个直播间活动通知的需求,服务器下发一串类Html协议的文本,然后解析组装成一个富文本展示.</p>
+<div class="entry-content"><p>最近在做一个直播间活动通知的需求,服务器下发一串类Html协议的文本,然后解析组装成一个富文本展示.</p>
 
 <p>在拼接完图片后发现文字和图片没有对齐,效果大概是这样:
-<img src="media/14981186608219/14981212053798.jpg" alt="" /></p>
+<img src="https://lh3.googleusercontent.com/-JSU2fYUuXV4/WVp5SeOBncI/AAAAAAAAAFY/Fur862HCAz8DBmfbBLzSoou-grN5gvhIwCHMYCw/I/14981212053798.jpg" alt="14981212053798" /></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -168,7 +167,7 @@
 <p>其实富文本中,图片居中只要知道文字的高度就可以计算了,Google后发现,其实UIFont的==lineHeight==属性就是文本的高度,使用文本高度减去图片高度除以2,就是图片的Y值.</p>
 
 <p>所以在设置NSTextAttachment时,计算正确的Y值,就可以使图片居中:
-<img src="media/14981186608219/14981219197864.jpg" alt="" /></p>
+<img src="https://lh3.googleusercontent.com/-t7CS3Ot4sjo/WVp5U1OZ_8I/AAAAAAAAAFc/yb4I6bnLr8MZdmdWKbQlH7qpNJDyntisACHMYCw/I/14981219197864.jpg" alt="14981219197864" /></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -182,7 +181,9 @@
 </span><span class='line'>imageAttachment.image = [UIImage imageNamed:@"image"];</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>关于UIFont的一些属性<img src="media/14981186608219/3761068638907909418.gif" alt="3761068638907909418" /></h3>
+<h3>关于UIFont的一些属性</h3>
+
+<p><img src="https://lh3.googleusercontent.com/-UF-ahvLNfGU/WVp5XYBsm7I/AAAAAAAAAFg/BkrhnO75fQg1uOFw1hYXTIrYDlfmNBJegCHMYCw/I/3761068638907909418.gif" alt="3761068638907909418" /></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -276,7 +277,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://callmewenxi.github.io/callmewenxi/blog/2017/07/04/kai-pian/" data-via="" data-counturl="http://callmewenxi.github.io/callmewenxi/blog/2017/07/04/kai-pian/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://callmewenxi.github.io/blog/2017/07/04/kai-pian/" data-via="" data-counturl="http://callmewenxi.github.io/blog/2017/07/04/kai-pian/" >Tweet</a>
   
   
   
@@ -299,7 +300,7 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/callmewenxi/blog/2017/07/04/kai-pian/">开篇</a>
+        <a href="/callmewenxi/blog/2017/07/04/kai-pian/">富文本中图片居中问题</a>
       </li>
     
   </ul>
